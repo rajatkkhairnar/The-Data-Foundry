@@ -1,0 +1,36 @@
+{
+    "timestamp": "2026-01-04 18:46:41",
+    "initial_health": {
+        "rows": 2005,
+        "columns": 5,
+        "issues": {
+            "missing_values": {
+                "customer_age": 10,
+                "category": 5
+            },
+            "duplicate_count": 5,
+            "high_cardinality": [
+                {
+                    "transaction_id": 2000
+                },
+                {
+                    "timestamp": 2000
+                }
+            ]
+        }
+    },
+    "final_health": {
+        "rows": 2000,
+        "columns": 5,
+        "issues": {
+            "missing_values": "None",
+            "duplicate_count": 0
+        }
+    },
+    "actions_taken": [
+        "Normalized text (strip & lowercase)",
+        "Removed duplicates",
+        "Filled missing values (Median for num, Mode for cat)",
+        "Capped outliers in 'amount' column (Z-score > 3)"
+    ]
+}

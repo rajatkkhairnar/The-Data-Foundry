@@ -1,0 +1,17 @@
+synthetic_data_generator/
+│
+├── src/
+│   ├── __init__.py
+│   ├── trainer.py          # Trains the GAN model and saves it
+│   ├── generator.py        # Loads model and generates new rows
+│   └── evaluator.py        # Proves the fake data is "good" (statistical tests)
+│
+├── models/                 # Where we save the trained .pkl model
+│   └── transaction_gan.pkl
+│
+├── data/
+│   ├── source_data.csv     # Copy of Project 1's clean_data.csv
+│   └── synthetic_data.csv  # The output
+│
+├── requirements.txt        # Dependencies (sdv, pandas)
+└── README.md
